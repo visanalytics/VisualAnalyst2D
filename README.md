@@ -1,6 +1,6 @@
 # VisualAnalyst2D
 This project aimed to implement a simple 2D data terrain, where 2D visualisations are based around Google Maps.
-A built-in datasetcomes from the VicRoads “CrashStats” data about motor vehicle accidents, which has been drawn 
+A built-in dataset comes from the VicRoads “CrashStats” data about motor vehicle accidents, which has been drawn 
 from data.vic.gov.au, see:
 
 http://www.data.vic.gov.au/data/dataset/crash-stats-data-extract 
