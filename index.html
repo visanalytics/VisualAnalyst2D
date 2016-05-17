@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Vehicle Accidents - Victoria</title>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>   
+    <script src="js/proj4.js"></script>
+    <script src="js/dhtmlxslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/dhtmlxslider.css"/>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="author" href="http://visanalytics.org/info/people/jacob-cybulski/"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+  </head>
+<body  onload="sliderLoad();" onunload="sliderUnload();">
+    <div id="top">		
+        <div class="info">
+            <table cellspacing="0" cellpadding="0" border="0" class="header_table">
+                <tr>
+                    <td>
+                        <label for="set-map">Map:</label>
+                        <select id="set-map">
+                                <option value="VicAll-1x1">Victoria (One)</option>
+                                <option value="VicAll-16x16" selected>Victoria (Outline)</option>
+                                <option value="VicAll-128x128">Victoria (Overview)</option>
+                                <option value="VicAll-256x256">Victoria (Detail)</option>
+                                <option value="LargerMelb-64x64">Larger Melbourne (Grain)</option>
+                                <option value="LargerMelb-128x128">Larger Melbourne (Fine)</option>
+                                <option value="CitySurr-16x16">Melbourne Inner Suburbs (Grain)</option>
+                                <option value="CitySurr-64x64">Melbourne Inner Suburbs (Medium)</option>
+                                <option value="CitySurr-128x128">Melbourne Inner Suburbs (Fine)</option>
+                                <option value="MelbCity-16x16">Melbourne City (Grain)</option>
+                                <option value="MelbCity-64x64">Melbourne City (Fine)</option>
+                                <!-- option value="Test" selected>Test</option-->
+                        </select>
+                        <label for="set-elevation">Elevation:</label>
+                        <select id="set-elevation">
+                                <option value="lgas">Local Gov Areas</option>
+                                <option value="sum" selected>Totals</option>
+                                <option value="fat">Fatalities</option>
+                                <option value="sev">Severity</option>
+                                <option value="sex">Gender</option>
+                                <option value="age">Age</option>
+                                <option value="fat-2012">Fatalities 2012</option>
+                                <option value="fat-2007">Fatalities 2007</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="set-display">Visual: </label>
+                        <select id="set-display">
+                                <option value="none">None</option>
+                                <option value="grid" selected>Grid</option>
+                                <option value="heatmap">Heat Map</option>
+                                <option value="circles">Bubbles</option>
+                        </select>
+                        <label style="padding: 10px;"></label>
+                        <label for="marker-hide">Markers: </label>
+                        <button id="marker-hide">None</button>
+                        <button id="marker-show">All</button>
+                        <button id="marker-selected">Selected</button>
+                    </td>
+                    <td>
+                        <label style="padding: 10px;"></label>
+                        <label>Tune: </label>
+                    </td>
+                    <td>
+                        <div id="size_slider"></div>
+                    </td>
+                    <td><div id="slider_value"></div></td>
+            </tr>
+            </table>
+        <div class="headerLine"></div>
+        <div class="mapCont">
+                <div id="map-canvas"></div>
+        </div>
+    </div>
+    <script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>
